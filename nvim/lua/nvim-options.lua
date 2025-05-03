@@ -7,22 +7,22 @@ vim.g.mapleader = " "
 vim.api.nvim_set_option("clipboard", "unnamedplus")
 
 vim.keymap.set("n", "<leader>er", function()
-  vim.diagnostic.open_float(nil, {
-    border = "rounded",
-    focusable = false,
-    scope = "line",
-    header = "",
-    source = "always",
-    prefix = "",
-  })
+	vim.diagnostic.open_float(nil, {
+		border = "rounded",
+		focusable = false,
+		scope = "line",
+		header = "",
+		source = "always",
+		prefix = "",
+	})
 end, { desc = "Show line diagnostics" })
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = "●",
-    spacing = 2,
-  },
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+	virtual_text = {
+		prefix = "●",
+		spacing = 2,
+	},
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
 })
