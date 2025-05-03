@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 vim.keymap.set("n", "<leader>er", function()
   vim.diagnostic.open_float(nil, {
     border = "rounded",
@@ -9,8 +11,10 @@ vim.keymap.set("n", "<leader>er", function()
   })
 end, { desc = "Show line diagnostics" })
 
--- Telescope
-
+-- bufferline
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<Leader>cb', '<Cmd>bd<CR>', { desc = 'Delete buffer' })
 
 -- none-ls
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
