@@ -6,16 +6,6 @@ vim.opt.number = true
 vim.g.mapleader = " "
 vim.api.nvim_set_option("clipboard", "unnamedplus")
 
-vim.keymap.set("n", "<leader>er", function()
-	vim.diagnostic.open_float(nil, {
-		border = "rounded",
-		focusable = false,
-		scope = "line",
-		header = "",
-		source = "always",
-		prefix = "",
-	})
-end, { desc = "Show line diagnostics" })
 vim.diagnostic.config({
 	virtual_text = {
 		prefix = "●",

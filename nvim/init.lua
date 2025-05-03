@@ -17,5 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
 
+require("keybindings")
 require("nvim-options")
 require("lazy").setup("plugins")
