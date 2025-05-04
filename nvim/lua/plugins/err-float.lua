@@ -1,25 +1,4 @@
---return {
---  vim.keymap.set("n", "<leader>er", function()
---    local devicons = require("nvim-web-devicons")
---
---    local filename = vim.fn.expand("%:t")
---    local extension = vim.fn.expand("%:e")
---
---    local icon, _ = devicons.get_icon(filename, extension, { default = true })
---
--- vim.diagnostic.open_float(nil, {
---    border = "rounded",
---     focusable = false,
---      scope = "line",
---      header = icon .. " " .. filename,
---      source = "always",
---      prefix = "",
---    })
---  end, { desc = "Show line diagnostics" }),
---}
-
 return {
-
 	vim.keymap.set("n", "<leader>er", function()
 		local devicons = require("nvim-web-devicons")
 		local bufnr = vim.api.nvim_create_buf(false, true)
@@ -55,6 +34,12 @@ return {
 		end
 
 		vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, lines)
+
+		vim.api.nvim_buf_set_option(bufnr, "buftype", "nofile")
+		vim.api.nvim_buf_set_option(bufnr, "filetype", "diagnostic-popup")
+		vim.api.nvim_buf_set_option(bufnr, "modifiable", false)
+		vim.api.nvim_buf_set_option(bufnr, "wrap", true) -- Enable wrapping
+		vim.api.nvim_buf_set_option(bufnr, "linebreak", true) -- Break on word boundaries
 
 		for _, hl in ipairs(highlights) do
 			local line, col_start, col_end, group = unpack(hl)
