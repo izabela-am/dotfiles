@@ -11,8 +11,9 @@ vim.keymap.set("n", "<Leader>cb", "<Cmd>bd<CR>", { desc = "Delete buffer" })
 -- none-ls
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
--- Neotree
-vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left <CR>")
+-- NvimTree
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tt', '<C-w>h', { noremap = true, silent = true })
 
 -- lsp-config
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {}) -- lang docs
