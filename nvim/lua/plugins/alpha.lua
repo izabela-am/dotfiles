@@ -46,8 +46,8 @@ return {
 
       local date = os.date(" %d/%m/%Y")
 
-      vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#b083e3", bold = true })
-      vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#b083e3", italic = true })
+      vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#F472B6", bold = true })
+      vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#F472B6", italic = true })
 
       return {
         nvim_ver,
