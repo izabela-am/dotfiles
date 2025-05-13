@@ -3,6 +3,9 @@ theme = oxocarbon.conf
 font-family = JetBrains Mono
 font-size = 20
 
+# disable font ligatures
+font-feature = -calt
+
 shell-integration = zsh
 
 keybind = cmd+n=new_window

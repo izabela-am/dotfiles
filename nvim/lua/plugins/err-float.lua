@@ -54,7 +54,7 @@ return {
 		local float_opts = {
 			relative = "cursor",
 			style = "minimal",
-			width = math.min(math.max(max_line_width + 4, 40), 80),
+			width = math.min(math.max(max_line_width + 4, 40), 100),
 			height = #lines,
 			row = 1,
 			col = 1,
