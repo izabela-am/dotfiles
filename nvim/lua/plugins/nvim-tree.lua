@@ -10,6 +10,10 @@ return {
       sort = {
         sorter = "case_sensitive",
       },
+      git = {
+        enable = true,
+        ignore = false, -- disables hiding of files/dirs inside .gitignore
+      },
       view = {
         width = 30,
       },
@@ -18,6 +22,10 @@ return {
       },
       filters = {
         dotfiles = false,
+        custom = {
+          "^.git$",
+          "^.DS_Store$"
+        }
       },
     })
   end,
